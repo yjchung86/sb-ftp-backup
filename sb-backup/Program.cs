@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace sb_backup
 {
@@ -6,7 +7,11 @@ namespace sb_backup
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            while (true)
+            {
+                Console.WriteLine("Hello World!");
+                Thread.Sleep(1000);
+            }
         }
     }
 }
