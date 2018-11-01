@@ -13,26 +13,13 @@ namespace sb_backup
             var userName = Environment.GetEnvironmentVariable("USERNAME");
             var password = Environment.GetEnvironmentVariable("PASSWORD");
 
-            Console.WriteLine($"{host}:{userName}:{password}");
+            var ftp = new FtpSslClient(host, userName, password);
 
             while (true)
             {
-                DoSomething();    
+                ftp.Upload("/opt/app-root/src/oc-config.txt", "oc-config.txt");  
                 Thread.Sleep(100000);
             }
-        }
-
-        static void DoSomething()
-        {
-
-            DirectoryInfo dirInfo = new DirectoryInfo("/opt/app-root/src");
-
-            foreach(var file in dirInfo.GetFiles())
-            {
-                Console.WriteLine(file.Name);
-            }
-
-            Console.WriteLine(DateTime.Now);
         }
     }
 }
