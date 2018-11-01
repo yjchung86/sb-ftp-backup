@@ -14,11 +14,11 @@ namespace sb_backup
             var password = Environment.GetEnvironmentVariable("PASSWORD");
 
             var ftp = new FtpSslClient(host, userName, password);
+            ftp.Upload("/opt/app-root/src/oc-config.txt", "oc-config.txt");
 
             while (true)
             {
-                ftp.Upload("/opt/app-root/src/oc-config.txt", "oc-config.txt");  
-                Thread.Sleep(100000);
+                Thread.Sleep(1000000);
             }
         }
     }
