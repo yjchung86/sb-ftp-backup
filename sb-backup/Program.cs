@@ -10,7 +10,7 @@ namespace sb_backup
             while (true)
             {
                 Console.WriteLine("Hello World!");
-                Thread.Sleep(1000);
+                Thread.Sleep(10000);
             }
         }
     }

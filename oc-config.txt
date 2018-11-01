@@ -1,0 +1,6 @@
+https://github.com/yjchung86/sb-ftp-backup.git
+
+registry.centos.org/dotnet/dotnet-20-centos7:latest
+
+DOTNET_STARTUP_PROJECT
+sb-backup/sb-backup.csproj
